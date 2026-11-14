@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilingual English | Pro Engineering & Business English (A1-B2)</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #238636;
+            --accent-red: #da3633;
+            --accent-purple: #bc8cff;
+            --accent-orange: #ffa657;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+        }
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .nav-links span {
+            margin-right: 15px;
+            color: var(--accent-blue);
+            cursor: pointer;
+        }
+        .topic-item, .quiz-item, .listening-item, .fib-item {
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--accent-blue);
+            padding: 12px 15px;
+            margin-bottom: 12px;
+            border-radius: 0 6px 6px 0;
+        }
+        .listening-item {
+            border-left-color: var(--accent-purple);
+        }
+        .fib-item {
+            border-left-color: var(--accent-orange);
+        }
+        .quiz-options label {
+            display: block;
+            margin: 6px 0;
+            cursor: pointer;
+        }
+        .explanation, .script-content {
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            display: none;
+            background: rgba(0,0,0,0.2);
+            padding: 10px;
+            border-radius: 6px;
+        }
+        input.fib-input {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--accent-blue);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            width: 140px;
+            text-align: center;
+        }
+        input.fib-input.correct {
+            border-color: var(--accent-green);
+            background-color: rgba(35, 134, 54, 0.1);
+        }
+        input.fib-input.incorrect {
+            border-color: var(--accent-red);
+            background-color: rgba(218, 54, 51, 0.1);
+        }
+        button.btn {
+            background-color: var(--accent-green);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button.btn-secondary {
+            background-color: #30363d;
+            color: var(--accent-blue);
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85em;
+            margin-top: 6px;
+        }
+        button.btn:hover, button.btn-secondary:hover {
+            opacity: 0.9;
+        }
+        .feedback-text {
+            font-size: 0.85em;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div>
+            <h1>🛠️ AeroCode English A1-B2 Pro</h1>
+            <p style="margin:0; color:var(--text-secondary);">Tailored for Taiwanese Engineers & Professionals</p>
+        </div>
+        <div class="nav-links">
+            <span>[ Curriculum (Weeks 1-16+)]</span>
+            <span>[ Bi-Weekly Assessment]</span>
+            <span>[ 繁體中文 / EN]</span>
+        </div>
+    </header>
+
+    <!-- Weekly Module Header -->
+    <div class="card">
+        <span style="color:var(--accent-blue); font-weight:bold;">MONTH 1 • FOUNDATION (A1)</span>
+        <h2>Week 2: Talking About Daily Tasks & Tools (Do / Does)</h2>
+        <p>Master 'do/does', pattern practices, listening comprehension, and multi-skill assessments across all weekly modules.</p>
+        <a href="url?id=5" target="_blank">[ Download / Print PDF]</a>
+    </div>
+
+    <!-- 10 Speaking Topics with Sentence Patterns -->
+    <div class="card">
+        <h3>🗣️ 10 Weekly Speaking Topics & Sentence Patterns</h3>
+        <p style="color:var(--text-secondary);">Gunakan pola kalimat ini untuk latihan berbicara (speaking practice) di setiap minggunya.</p>
+        
+        <div class="topic-item">
+            <strong>1. Daily System Maintenance</strong><br>
+            <em>Pattern:</em> I usually [action] every [timeframe] to ensure [benefit].<br>
+            <em>Example:</em> "I usually check the server logs every morning to ensure system stability."
+        </div>
+        <div class="topic-item">
+            <strong>2. Software & Tool Usage</strong><br>
+            <em>Pattern:</em> For [task], I use [Tool/Software] because it helps me [benefit].<br>
+            <em>Example:</em> "For data analysis, I use Python because it helps me process data quickly."
+        </div>
+        <div class="topic-item">
+            <strong>3. Reporting Bugs & Issues</strong><br>
+            <em>Pattern:</em> When [issue] happens, I immediately [action] and notify [person].<br>
+            <em>Example:</em> "When a server error happens, I immediately run diagnostics and notify the team lead."
+        </div>
+        <div class="topic-item">
+            <strong>4. Meeting & Stand-up Updates</strong><br>
+            <em>Pattern:</em> Today, I am focusing on [task], and my next step is [next task].<br>
+            <em>Example:</em> "Today, I am focusing on fixing database bugs, and my next step is code review."
+        </div>
+        <div class="topic-item">
+            <strong>5. Explaining Project Deadlines</strong><br>
+            <em>Pattern:</em> The deadline for [project/task] is on [day/date], and we are currently [status].<br>
+            <em>Example:</em> "The deadline for the API integration is on Friday, and we are currently testing."
+        </div>
+        <div class="topic-item">
+            <strong>6. Hardware & Equipment Check</strong><br>
+            <em>Pattern:</em> We need to inspect [equipment] because [reason].<br>
+            <em>Example:</em> "We need to inspect the cooling fans because the temperature is rising."
+        </div>
+        <div class="topic-item">
+            <strong>7. Requesting Assistance or Permission</strong><br>
+            <em>Pattern:</em> Could you please help me [action] or grant me access to [resource]?<br>
+            <em>Example:</em> "Could you please help me review this pull request or grant me access to the staging server?"
+        </div>
+        <div class="topic-item">
+            <strong>8. Data Presentation & Numbers</strong><br>
+            <em>Pattern:</em> The performance metric increased by [X]% compared to [previous period].<br>
+            <em>Example:</em> "The server response speed increased by 25% compared to last week."
+        </div>
+        <div class="topic-item">
+            <strong>9. Writing Technical Email Summaries</strong><br>
+            <em>Pattern:</em> I am writing to update you on the status of [project/task].<br>
+            <em>Example:</em> "I am writing to update you on the status of the migration to AWS."
+        </div>
+        <div class="topic-item">
+            <strong>10. Q&A and Clarification Sessions</strong><br>
+            <em>Pattern:</em> Could you clarify what you mean by [technical term or requirement]?<br>
+            <em>Example:</em> "Could you clarify what you mean by 'low-latency payload' in the specification?"
+        </div>
+    </div>
+
+    <!-- 🧩 NEW: Interactive Fill-in-the-Blank Pattern Practice -->
+    <div class="card">
+        <h3>🧩 Interactive Fill-in-the-Blank Pattern Practice</h3>
+        <p style="color:var(--text-secondary);">Isi bagian yang kosong menggunakan kosakata teknis yang tepat sesuai pola kalimat di atas.</p>
+
+        <!-- FIB 1 -->
+        <div class="fib-item">
+            <p>1. I usually <input type="text" class="fib-input" id="fib1" data-answer="check the server logs"> every morning to ensure system stability.</p>
+        </div>
+        <!-- FIB 2 -->
+        <div class="fib-item">
+            <p>2. For data analysis, I use Python because it helps me <input type="text" class="fib-input" id="fib2" data-answer="process data quickly">.</p>
+        </div>
+        <!-- FIB 3 -->
+        <div class="fib-item">
+            <p>3. When a server error happens, I immediately <input type="text" class="fib-input" id="fib3" data-answer="run diagnostics"> and notify the team lead.</p>
+        </div>
+        <!-- FIB 4 -->
+        <div class="fib-item">
+            <p>4. Today, I am focusing on fixing database bugs, and my next step is <input type="text" class="fib-input" id="fib4" data-answer="code review">.</p>
+        </div>
+        <!-- FIB 5 -->
+        <div class="fib-item">
+            <p>5. The deadline for the API integration is on Friday, and we are currently <input type="text" class="fib-input" id="fib5" data-answer="testing">.</p>
+        </div>
+        <!-- FIB 6 -->
+        <div class="fib-item">
+            <p>6. We need to inspect the cooling fans because the <input type="text" class="fib-input" id="fib6" data-answer="temperature is rising">.</p>
+        </div>
+        <!-- FIB 7 -->
+        <div class="fib-item">
+            <p>7. Could you please help me review this pull request or grant me access to the <input type="text" class="fib-input" id="fib7" data-answer="staging server">?</p>
+        </div>
+        <!-- FIB 8 -->
+        <div class="fib-item">
+            <p>8. The server response speed increased by <input type="text" class="fib-input" id="fib8" data-answer="25%"> compared to last week.</p>
+        </div>
+        <!-- FIB 9 -->
+        <div class="fib-item">
+            <p>9. I am writing to update you on the status of the <input type="text" class="fib-input" id="fib9" data-answer="migration to AWS">.</p>
+        </div>
+        <!-- FIB 10 -->
+        <div class="fib-item">
+            <p>10. Could you clarify what you mean by '<input type="text" class="fib-input" id="fib10" data-answer="low-latency payload">' in the specification?</p>
+        </div>
+
+        <br>
+        <button class="btn" onclick="checkFIB()">Check Pattern Answers</button>
+    </div>
+
+    <!-- 🎧 10 Listening Practice Modules & Audio Scripts -->
+    <div class="card">
+        <h3>🎧 10 Listening Practice Modules & Audio Scripts</h3>
+        <p style="color:var(--text-secondary);">Simak dialog audio atau skrip profesional di bawah ini untuk mengasah kemampuan listening Anda sesuai topik mingguan.</p>
+
+        <!-- Listening 1 -->
+        <div class="listening-item">
+            <strong>1. Daily System Maintenance</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> A morning discussion on checking routine server logs.</p>
+            <button class="btn-secondary" onclick="toggleScript('script1')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script1">
+                <strong>Audio Script:</strong><br>
+                <em>Manager:</em> "Alex, do you usually check the system parameters in the morning?"<br>
+                <em>Alex:</em> "Yes, I usually check the server logs every morning to ensure system stability before peak hours."
+            </div>
+        </div>
+
+        <!-- Listening 2 -->
+        <div class="listening-item">
+            <strong>2. Software & Tool Usage</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Choosing the right programming environment for data metrics.</p>
+            <button class="btn-secondary" onclick="toggleScript('script2')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script2">
+                <strong>Audio Script:</strong><br>
+                <em>Engineer A:</em> "What tool do you prefer for processing these large logs?"<br>
+                <em>Engineer B:</em> "For data analysis, I use Python because it helps me process data quickly and efficiently."
+            </div>
+        </div>
+
+        <!-- Listening 3 -->
+        <div class="listening-item">
+            <strong>3. Reporting Bugs & Issues</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Handling unexpected downtime or exception errors.</p>
+            <button class="btn-secondary" onclick="toggleScript('script3')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script3">
+                <strong>Audio Script:</strong><br>
+                <em>Support:</em> "What is your protocol when a critical crash occurs?"<br>
+                <em>Lead:</em> "When a server error happens, I immediately run diagnostics and notify the team lead."
+            </div>
+        </div>
+
+        <!-- Listening 4 -->
+        <div class="listening-item">
+            <strong>4. Meeting & Stand-up Updates</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Daily agile stand-up status report.</p>
+            <button class="btn-secondary" onclick="toggleScript('script4')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script4">
+                <strong>Audio Script:</strong><br>
+                <em>Scrum Master:</em> "Can you give us a quick brief on your workload today?"<br>
+                <em>Developer:</em> "Today, I am focusing on fixing database bugs, and my next step is code review."
+            </div>
+        </div>
+
+        <!-- Listening 5 -->
+        <div class="listening-item">
+            <strong>5. Explaining Project Deadlines</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Checking milestone targets for client delivery.</p>
+            <button class="btn-secondary" onclick="toggleScript('script5')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script5">
+                <strong>Audio Script:</strong><br>
+                <em>Client:</em> "When can we expect the final integration build?"<br>
+                <em>PM:</em> "The deadline for the API integration is on Friday, and we are currently testing."
+            </div>
+        </div>
+
+        <!-- Listening 6 -->
+        <div class="listening-item">
+            <strong>6. Hardware & Equipment Check</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Monitoring hardware vitals and thermal thresholds.</p>
+            <button class="btn-secondary" onclick="toggleScript('script6')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script6">
+                <strong>Audio Script:</strong><br>
+                <em>Technician:</em> "The rack sensors show unusual heat generation."<br>
+                <em>Supervisor:</em> "We need to inspect the cooling fans immediately because the temperature is rising."
+            </div>
+        </div>
+
+        <!-- Listening 7 -->
+        <div class="listening-item">
+            <strong>7. Requesting Assistance or Permission</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Asking for repository rights and code check support.</p>
+            <button class="btn-secondary" onclick="toggleScript('script7')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script7">
+                <strong>Audio Script:</strong><br>
+                <em>Junior Dev:</em> "I'm locked out of the repository deployment branch."<br>
+                <em>Senior Dev:</em> "Could you please help me review this pull request or grant me access to the staging server?"
+            </div>
+        </div>
+
+        <!-- Listening 8 -->
+        <div class="listening-item">
+            <strong>8. Data Presentation & Numbers</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Reviewing benchmark performance increments.</p>
+            <button class="btn-secondary" onclick="toggleScript('script8')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script8">
+                <strong>Audio Script:</strong><br>
+                <em>Director:</em> "Did our optimization patches make any noticeable difference?"<br>
+                <em>Analyst:</em> "Yes! The server response speed increased by 25% compared to last week."
+            </div>
+        </div>
+
+        <!-- Listening 9 -->
+        <div class="listening-item">
+            <strong>9. Writing Technical Email Summaries</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Aligning cloud migration statuses via email template.</p>
+            <button class="btn-secondary" onclick="toggleScript('script9')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script9">
+                <strong>Audio Script:</strong><br>
+                <em>Sender:</em> "I'm drafting our stakeholder bulletin right now."<br>
+                <em>Colleague:</em> "Great, make sure you state clearly: 'I am writing to update you on the status of the migration to AWS.'"
+            </div>
+        </div>
+
+        <!-- Listening 10 -->
+        <div class="listening-item">
+            <strong>10. Q&A and Clarification Sessions</strong><br>
+            <p style="margin:6px 0;"><em>Context:</em> Deep-dive tech specs discussion during requirements alignment.</p>
+            <button class="btn-secondary" onclick="toggleScript('script10')">🎵 Toggle Audio Script</button>
+            <div class="script-id script-content" id="script10">
+                <strong>Audio Script:</strong><br>
+                <em>Architect:</em> "We need optimized streaming packets for this module."<br>
+                <em>Engineer:</em> "Could you clarify what you mean by 'low-latency payload' in the specification document?"
+            </div>
+        </div>
+    </div>
+
+    <!-- 10 Multiple Choice Questions with Explanations -->
+    <div class="card">
+        <h3>📝 10 Multiple Choice Assessment & Explanations</h3>
+        <p style="color:var(--text-secondary);">Pilih jawaban yang benar. Penjelasan akan muncul jika jawaban Anda salah atau untuk memperkuat pemahaman.</p>
+
+        <!-- Soal 1 -->
+        <div class="quiz-item">
+            <p><strong>1. The engineer ___ not use Python for this hardware project.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q1" value="A"> A. do</label>
+                <label><input type="radio" name="q1" value="B" data-correct="true"> B. does</label>
+                <label><input type="radio" name="q1" value="C"> C. doing</label>
+            </div>
+            <div class="explanation" id="exp1">❌ <strong>Penjelasan:</strong> Subjek "The engineer" adalah bentuk tunggal ketiga (singular third-person / He/She/It), sehingga dalam kalimat negatif bentuk Present Simple menggunakan <strong>doesn't (does not)</strong>, bukan don't.</div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="quiz-item">
+            <p><strong>2. ___ your supervisor check the server logs every morning?</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q2" value="A"> A. Do</label>
+                <label><input type="radio" name="q2" value="B" data-correct="true"> B. Does</label>
+                <label><input type="radio" name="q2" value="C"> C. Is</label>
+            </div>
+            <div class="explanation" id="exp2">❌ <strong>Penjelasan:</strong> Karena "your supervisor" adalah subjek tunggal (orang ketiga), maka kata kerja bantu (auxiliary verb) yang digunakan di awal kalimat tanya Present Simple adalah <strong>Does</strong>.</div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="quiz-item">
+            <p><strong>3. We ___ manual repairs; we always use automated diagnostic scripts.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q3" value="A" data-correct="true"> A. don't do</label>
+                <label><input type="radio" name="q3" value="B"> B. doesn't do</label>
+                <label><input type="radio" name="q3" value="C"> C. not do</label>
+            </div>
+            <div class="explanation" id="exp3">❌ <strong>Penjelasan:</strong> Subjek "We" menggunakan bentuk plural (jamak), sehingga bentuk negatif untuk kebiasaan (Present Simple) adalah <strong>don't (do not)</strong>.</div>
+        </div>
+
+        <!-- Soal 4 -->
+        <div class="quiz-item">
+            <p><strong>4. Every day, I ___ the system testing and write a daily progress report.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q4" value="A" data-correct="true"> A. do</label>
+                <label><input type="radio" name="q4" value="B"> B. does</label>
+                <label><input type="radio" name="q4" value="C"> C. doing</label>
+            </div>
+            <div class="explanation" id="exp4">❌ <strong>Penjelasan:</strong> Subjek "I" menggunakan bentuk dasar verb <strong>do</strong> dalam kalimat positif Present Simple (I do, You do, We do, They do).</div>
+        </div>
+
+        <!-- Soal 5 -->
+        <div class="quiz-item">
+            <p><strong>5. What software ___ you use for data analysis in your daily workflow?</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q5" value="A"> A. does</label>
+                <label><input type="radio" name="q5" value="B" data-correct="true"> B. do</label>
+                <label><input type="radio" name="q5" value="C"> C. is</label>
+            </div>
+            <div class="explanation" id="exp5">❌ <strong>Penjelasan:</strong> Pertanyaan dengan subjek "you" menggunakan kata kerja bantu <strong>do</strong> (What do you use...?).</div>
+        </div>
+
+        <!-- Soal 6 -->
+        <div class="quiz-item">
+            <p><strong>6. The testing equipment ___ properly when the room temperature gets too high.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q6" value="A"> A. don't work</label>
+                <label><input type="radio" name="q6" value="B" data-correct="true"> B. doesn't work</label>
+                <label><input type="radio" name="q6" value="C"> C. not working</label>
+            </div>
+            <div class="explanation" id="exp6">❌ <strong>Penjelasan:</strong> "The testing equipment" dianggap sebagai kata benda tunggal (it), sehingga bentuk negatifnya menggunakan <strong>doesn't work</strong>.</div>
+        </div>
+
+        <!-- Soal 7 -->
+        <div class="quiz-item">
+            <p><strong>7. My colleagues and I ___ code reviews every Tuesday afternoon.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q7" value="A" data-correct="true"> A. conduct</label>
+                <label><input type="radio" name="q7" value="B"> B. conducts</label>
+                <label><input type="radio" name="q7" value="C"> C. conducting</label>
+            </div>
+            <div class="explanation" id="exp7">❌ <strong>Penjelasan:</strong> "My colleagues and I" adalah subjek jamak (plural), sehingga menggunakan verb bentuk dasar tanpa penambahan -s/-es, yaitu <strong>conduct</strong>.</div>
+        </div>
+
+        <!-- Soal 8 -->
+        <div class="quiz-item">
+            <p><strong>8. ___ your team maintain server stability throughout the week?</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q8" value="A"> A. Are</label>
+                <label><input type="radio" name="q8" value="B"> B. Does</label>
+                <label><input type="radio" name="q8" value="C" data-correct="true"> C. Do</label>
+            </div>
+            <div class="explanation" id="exp8">❌ <strong>Penjelasan:</strong> Kata "team" dalam konteks operasional kelompok secara kolektif sering menggunakan auxiliary <strong>Do</strong> (atau Does dalam bentuk tunggal mutlak, namun bentuk standar interogatif kelompok kerja menggunakan Do).</div>
+        </div>
+
+        <!-- Soal 9 -->
+        <div class="quiz-item">
+            <p><strong>9. She ___ touch the hardware directly because her main focus is software development.</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q9" value="A"> A. don't</label>
+                <label><input type="radio" name="q9" value="B" data-correct="true"> B. doesn't</label>
+                <label><input type="radio" name="q9" value="C"> C. isn't</label>
+            </div>
+            <div class="explanation" id="exp9">❌ <strong>Penjelasan:</strong> Subjek "She" adalah kata ganti orang ketiga tunggal, sehingga kata kerja bantu negatifnya adalah <strong>doesn't</strong>.</div>
+        </div>
+
+        <!-- Soal 10 -->
+        <div class="quiz-item">
+            <p><strong>10. How often ___ you update the API documentation?</strong></p>
+            <div class="quiz-options">
+                <label><input type="radio" name="q10" value="A" data-correct="true"> A. do</label>
+                <label><input type="radio" name="q10" value="B"> B. does</label>
+                <label><input type="radio" name="q10" value="C"> C. are</label>
+            </div>
+            <div class="explanation" id="exp10">❌ <strong>Penjelasan:</strong> Pertanyaan dengan kata tanya "How often" untuk subjek "you" memerlukan auxiliary verb <strong>do</strong> di depannya.</div>
+        </div>
+
+        <br>
+        <button class="btn" onclick="checkAnswers()">Check Quiz Answers & Explanations</button>
+    </div>
+
+</div>
+
+<script>
+    function toggleScript(id) {
+        let scriptEl = document.getElementById(id);
+        scriptEl.style.display = (scriptEl.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function checkFIB() {
+        for (let i = 1; i <= 10; i++) {
+            let input = document.getElementById('fib' + i);
+            let userVal = input.value.trim().toLowerCase();
+            let correctVal = input.getAttribute('data-answer').toLowerCase();
+
+            // Ignore case and minor extra whitespace for flexible checking
+            if (userVal === correctVal) {
+                input.classList.remove('incorrect');
+                input.classList.add('correct');
+            } else {
+                input.classList.remove('correct');
+                input.classList.add('incorrect');
+            }
+        }
+        alert("Pemeriksaan pola kalimat selesai! Kotak hijau menandakan benar, kotak merah menandakan perlu diperbaiki.");
+    }
+
+    function checkAnswers() {
+        for (let i = 1; i <= 10; i++) {
+            let radios = document.getElementsByName('q' + i);
+            let exp = document.getElementById('exp' + i);
+            let answeredCorrectly = false;
+            
+            for (let r of radios) {
+                if (r.checked && r.getAttribute('data-correct') === 'true') {
+                    answeredCorrectly = true;
+                }
+            }
+
+            if (!answeredCorrectly) {
+                exp.style.display = 'block';
+            } else {
+                exp.style.display = 'none';
+            }
+        }
+        alert("Pemeriksaan kuis pilihan ganda selesai! Penjelasan muncul pada soal yang jawabannya keliru.");
+    }
+</script>
+
+</body>
+</html>
